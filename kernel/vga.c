@@ -15,6 +15,7 @@ void vga_init(void) {
     vga_row = 0;
     vga_column = 0;
     vga_color = vga_make_color(VGA_COLOR_WHITE, VGA_COLOR_BLACK);
+    vga_clear();  // Clear screen on initialization
 }
 
 // Create VGA color byte

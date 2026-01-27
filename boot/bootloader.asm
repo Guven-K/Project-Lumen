@@ -40,7 +40,7 @@ start:
     mov cl, 0x02           ; Start from sector 2 (sector 1 is bootloader)
     mov dh, 0x00           ; Head 0
     mov dl, [boot_drive]
-    mov bx, 0x1000         ; Load kernel at 0x1000
+    mov bx, 0x8000         ; Load kernel at 0x8000 (safe location)
     int 0x13
     jc disk_error
 
@@ -138,8 +138,8 @@ protected_mode:
     mov ebp, 0x90000
     mov esp, ebp
     
-    ; Jump to kernel
-    jmp 0x1000
+    ; Jump to kernel (loaded at 0x8000)
+    jmp 0x8000
 
 ; Boot signature
 times 510-($-$$) db 0

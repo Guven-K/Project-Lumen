@@ -7,8 +7,8 @@ ENTRY(kernel_main)
 
 SECTIONS
 {
-    /* Kernel loaded at 1MB */
-    . = 0x1000;
+    /* Kernel loaded at 32KB (0x8000) by bootloader */
+    . = 0x8000;
 
     .text : ALIGN(4K)
     {

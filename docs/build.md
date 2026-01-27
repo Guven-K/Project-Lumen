@@ -52,6 +52,8 @@ mkdir -p ~/cross-compiler && cd ~/cross-compiler
 
 # Binutils
 wget https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz
+wget https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz.sig
+# Verify signature (optional but recommended)
 tar -xf binutils-2.39.tar.xz
 mkdir build-binutils && cd build-binutils
 ../binutils-2.39/configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror
@@ -61,6 +63,8 @@ cd ..
 
 # GCC
 wget https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz
+wget https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz.sig
+# Verify signature (optional but recommended)
 tar -xf gcc-12.2.0.tar.xz
 mkdir build-gcc && cd build-gcc
 ../gcc-12.2.0/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
