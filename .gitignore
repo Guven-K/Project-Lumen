@@ -1,0 +1,40 @@
+# Project Lumen .gitignore
+
+# Build artifacts
+build/
+*.o
+*.bin
+*.iso
+*.elf
+
+# Editor and IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+
+# Dependencies
+*.d
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cross-compiler tools (if built locally)
+cross-compiler/
+toolchain/

@@ -1,0 +1,33 @@
+/*
+ * Kernel Linker Script
+ * Defines memory layout for the kernel
+ */
+
+ENTRY(kernel_main)
+
+SECTIONS
+{
+    /* Kernel loaded at 1MB */
+    . = 0x1000;
+
+    .text : ALIGN(4K)
+    {
+        *(.text)
+    }
+
+    .rodata : ALIGN(4K)
+    {
+        *(.rodata)
+    }
+
+    .data : ALIGN(4K)
+    {
+        *(.data)
+    }
+
+    .bss : ALIGN(4K)
+    {
+        *(COMMON)
+        *(.bss)
+    }
+}
