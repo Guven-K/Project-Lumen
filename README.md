@@ -3,7 +3,9 @@ Project Lumen is a clean, Windows-like operating system built from scratch (cust
 
 
 ## Documentation
-Documentation is coming soon and will include:
+Documentation and technical details will be added soon.  
+This project is currently in the planning and design phase.
+It will include: 
 
 - System architecture overview  
 - Kernel design decisions  
