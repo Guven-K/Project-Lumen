@@ -53,22 +53,26 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)/iso/boot/grub
 
 # Build bootloader
-$(BOOTLOADER): $(BOOT_DIR)/bootloader.asm | $(BUILD_DIR)
+$(BOOTLOADER): $(BOOT_DIR)/bootloader.asm $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/boot
 	$(ASM) $(ASM_FLAGS) $< -o $@
 
 # Build kernel object files
-$(BUILD_DIR)/kernel/%.o: $(KERNEL_DIR)/%.c | $(BUILD_DIR)
+$(BUILD_DIR)/kernel/%.o: $(KERNEL_DIR)/%.c $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/kernel
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
-$(BUILD_DIR)/kernel/%.o: $(KERNEL_DIR)/%.asm | $(BUILD_DIR)
+$(BUILD_DIR)/kernel/%.o: $(KERNEL_DIR)/%.asm $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/kernel
 	$(ASM) -f elf32 $< -o $@
 
 # Link kernel
-$(KERNEL): $(KERNEL_OBJECTS) | $(BUILD_DIR)
-	$(LD) $(LD_FLAGS) -o $@ $^
+$(KERNEL): $(KERNEL_OBJECTS) $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/kernel
+	$(LD) $(LD_FLAGS) -o $@ $(KERNEL_OBJECTS)
 
 # Create ISO
-$(ISO): $(BOOTLOADER) $(KERNEL) | $(BUILD_DIR)
+$(ISO): $(BOOTLOADER) $(KERNEL) $(BUILD_DIR)
 	mkdir -p $(BUILD_DIR)/iso/boot/grub
 	cp $(KERNEL) $(BUILD_DIR)/iso/boot/kernel.bin
 	echo 'set timeout=0' > $(BUILD_DIR)/iso/boot/grub/grub.cfg
