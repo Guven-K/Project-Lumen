@@ -38,3 +38,7 @@ temp/
 # Cross-compiler tools (if built locally)
 cross-compiler/
 toolchain/
+
+# CodeQL and security scanning
+_codeql_detected_source_root
+.codeql/
