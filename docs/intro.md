@@ -1,6 +1,6 @@
 # Project Lumen
 
-Project Lumen is clean modern, Windows-like operating System built from scratch entirely with custom (No linux or BSD). Very ambitious 
+Project Lumen is clean modern, Windows-like operating System built from scratch entirely with custom (No linux or BSD).
 The goal is provide a familar desktop experince that is fast, lightweight, ultitises modern techologies and it is free from bloat, ads and telemtry etc. Project Lumen is designed to be as single OS - NOT A COLLECTION OF DISTROS**. Aims to provide official experience and a clear product vision.
 
 ## Why Project Lumen Exists
