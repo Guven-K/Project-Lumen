@@ -5,16 +5,17 @@ The goal is provide a familar desktop experince that is fast, lightweight, ultit
 
 ## Why Project Lumen Exists
 
-As you know modern desktop operating systems having become increasingly very complex and cluttered:
+As you know modern desktop operating systems having become increasingly complex and cluttered:
 
 - Forced background application and services
-- Advertisements and Telemtry
+- Advertisements and telemtry
 - Inconsistent user experience
 - Heavy background processes
 - Limited control over system behaviour
+- Heavy built in AI services such as Copilot
 
 Project Lumen aims to explore different approach:
-A desktop OS that priotiises:
+A desktop OS that priotises:
 - Performance and responsive scaled across CPUs with more cores
 - Simplicity and clarity
 - User choice
@@ -22,3 +23,15 @@ A desktop OS that priotiises:
 - A consistent and customisable UI.
 - More options in the settings.
 - Privacy in mind e.g. microphone or camera access.
+
+ ## Core Principles 
+Project Lumen is not a distrubed-based system!
+Only one official OS build with controlled updates, a single desktop environment and a unified design language.
+No fragmentation and No distro variants.
+Apps are like Windows, but drivers are controlled like macOS.
+
+
+
+
+
+  
