@@ -12,4 +12,5 @@ It will include:
 - Driver model  
 - Graphics and UI concepts  
 - Roadmap and milestones  
-- Contribution guidelines  
+- Contribution guidelines
+- Developer Documentation 
