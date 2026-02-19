@@ -14,3 +14,10 @@ It will include:
 - Roadmap and milestones  
 - Contribution guidelines
 - Developer Documentation 
+
+
+# Flexibility
+- Advanced tools
+- Memory limit is no longer a thing
+- Limitless potential 
+- Easy for development
